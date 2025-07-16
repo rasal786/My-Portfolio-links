@@ -134,9 +134,7 @@ const SkillsSection = () => {
       }} viewport={{
         once: true
       }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            My 
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">My Skills</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A comprehensive overview of my technical abilities and growing expertise across various domains
           </p>
