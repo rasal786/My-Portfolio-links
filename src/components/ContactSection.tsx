@@ -87,9 +87,7 @@ const ContactSection = () => {
       }} viewport={{
         once: true
       }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Get In 
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to collaborate or have a question? I'd love to hear from you. Let's build something amazing together!
           </p>
