@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import profileImage from '@/assets/profile-photo.jpg';
+const profileImage = '/lovable-uploads/225ed0e3-f2d6-42a8-85d6-a01180afec78.png';
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
