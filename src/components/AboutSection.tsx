@@ -53,9 +53,7 @@ const AboutSection = () => {
       }} viewport={{
         once: true
       }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About 
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Discover my journey, education, and the passion that drives my work in technology
           </p>
