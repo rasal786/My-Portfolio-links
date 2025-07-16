@@ -1,42 +1,32 @@
-import React, { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Sphere, MeshDistortMaterial } from '@react-three/drei';
-import * as THREE from 'three';
-
-const AnimatedSphere = () => {
-  const meshRef = useRef<THREE.Mesh>(null!);
-
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x = state.clock.elapsedTime * 0.1;
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.15;
-    }
-  });
-
-  return (
-    <Sphere ref={meshRef} args={[1, 100, 200]} scale={2}>
-      <MeshDistortMaterial
-        color="#8b5cf6"
-        attach="material"
-        distort={0.5}
-        speed={1.5}
-        roughness={0.2}
-        metalness={0.8}
-        transparent
-        opacity={0.3}
-      />
-    </Sphere>
-  );
-};
+import React from 'react';
 
 const Background3D = () => {
   return (
-    <div className="fixed inset-0 -z-10">
-      <Canvas camera={{ position: [0, 0, 5] }}>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} />
-        <AnimatedSphere />
-      </Canvas>
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background">
+        <div className="absolute inset-0 bg-hero-gradient opacity-5 animate-pulse"></div>
+      </div>
+      
+      {/* Floating particles */}
+      <div className="absolute inset-0">
+        {[...Array(50)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-primary rounded-full opacity-20 animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${3 + Math.random() * 4}s`,
+            }}
+          />
+        ))}
+      </div>
+      
+      {/* Gradient orbs */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
     </div>
   );
 };
