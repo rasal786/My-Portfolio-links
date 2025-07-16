@@ -21,9 +21,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent mb-2">
-              Mohamed Rasal
-            </h3>
+            
             <p className="text-muted-foreground">
               Data Science & Frontend Development Enthusiast
             </p>
