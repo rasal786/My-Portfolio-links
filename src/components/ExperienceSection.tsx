@@ -71,9 +71,7 @@ const ExperienceSection = () => {
       }} viewport={{
         once: true
       }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            My 
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">My Experience</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Professional journey through internships and practical learning experiences
           </p>
