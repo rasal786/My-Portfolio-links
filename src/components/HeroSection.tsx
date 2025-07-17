@@ -77,10 +77,7 @@ const HeroSection = () => {
             duration: 0.8,
             delay: 0.2
           }}>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                Hi, I'm{' '}
-                
-              </h1>
+              
               
               <motion.div initial={{
               opacity: 0
