@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin, Github, Linkedin, Send, MessageCircle, Download } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 const ContactSection = () => {
   const {
     toast
@@ -52,20 +53,38 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'rasaljafreennj@gmail.com'
+      };
 
-    // Simulate form submission
-    setTimeout(() => {
+      await emailjs.send(
+        'service_h9ey71u',
+        'template_6blmzo4',
+        templateParams,
+        '0MLzmvRR93LcwH4OR'
+      );
+      
       toast({
         title: "Message sent successfully!",
         description: "Thank you for reaching out. I'll get back to you soon."
       });
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
+      
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Error sending message",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
       });
+    } finally {
       setIsSubmitting(false);
-    }, 2000);
+    }
   };
   const downloadResume = () => {
     window.open('https://drive.google.com/file/d/1YK4ylC95-Nno3z3vEsbDL2wTcBqjRUlV/view?usp=drive_link', '_blank');
