@@ -22,9 +22,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="text-center md:text-left">
             
-            <p className="text-muted-foreground">
-              Data Science & Frontend Development Enthusiast
-            </p>
+            
           </div>
 
           {/* Social Links */}
@@ -40,9 +38,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-center md:text-right">
-            <p className="text-muted-foreground flex items-center justify-center md:justify-end gap-1">
-              © {currentYear} Made with <Heart className="w-4 h-4 text-red-500" /> by Mohamed Rasal
-            </p>
+            
           </div>
         </div>
 
