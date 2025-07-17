@@ -68,11 +68,7 @@ const ContactSection = () => {
     }, 2000);
   };
   const downloadResume = () => {
-    toast({
-      title: "Resume download initiated",
-      description: "Your download will begin shortly."
-    });
-    // In a real app, this would trigger an actual file download
+    window.open('https://drive.google.com/file/d/1YK4ylC95-Nno3z3vEsbDL2wTcBqjRUlV/view?usp=drive_link', '_blank');
   };
   return <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-6">
