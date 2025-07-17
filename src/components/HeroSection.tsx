@@ -79,20 +79,7 @@ const HeroSection = () => {
           }}>
               
 
-              <motion.p initial={{
-              opacity: 0,
-              y: 30
-            }} animate={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.7
-            }} className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                A passionate tech enthusiast diving deep into the world of data science and frontend development. 
-                With hands-on internship experience and a growing skillset in Python and JavaScript, 
-                I thrive on building user-focused digital solutions that are both visually compelling and functionally robust.
-              </motion.p>
+              
 
               <motion.div initial={{
               opacity: 0,
