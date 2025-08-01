@@ -5,14 +5,6 @@ import { Badge } from '@/components/ui/badge';
 import { Briefcase, Calendar, TrendingUp, Users, Lightbulb, Database, Code, Network } from 'lucide-react';
 const ExperienceSection = () => {
   const experiences = [{
-    role: "Front End Developer",
-    period: "2024",
-    type: "Project",
-    icon: Code,
-    description: "Developed responsive and interactive web applications using modern front-end technologies. Focused on creating seamless user experiences with clean, maintainable code and optimized performance.",
-    highlights: ["Responsive web design implementation", "Interactive UI component development", "Performance optimization and lazy loading", "Cross-browser compatibility testing", "Modern JavaScript framework integration"],
-    skills: ["React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "JavaScript", "Git"]
-  }, {
     role: "Networking Specialist",
     period: "2024",
     type: "Technical",
@@ -20,6 +12,14 @@ const ExperienceSection = () => {
     description: "Gained expertise in network infrastructure, protocols, and security. Implemented and maintained network solutions while ensuring optimal performance and security standards.",
     highlights: ["Network topology design and implementation", "Router and switch configuration", "Network security protocol implementation", "Performance monitoring and troubleshooting", "Network documentation and maintenance"],
     skills: ["TCP/IP", "Cisco", "Network Security", "VPN", "Firewalls", "Wireshark", "Network Monitoring"]
+  }, {
+    role: "Front End Developer",
+    period: "2024",
+    type: "Project",
+    icon: Code,
+    description: "Developed responsive and interactive web applications using modern front-end technologies. Focused on creating seamless user experiences with clean, maintainable code and optimized performance.",
+    highlights: ["Responsive web design implementation", "Interactive UI component development", "Performance optimization and lazy loading", "Cross-browser compatibility testing", "Modern JavaScript framework integration"],
+    skills: ["React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "JavaScript", "Git"]
   }, {
     role: "Data Science Intern",
     period: "Summer 2024",
