@@ -77,10 +77,12 @@ const HeroSection = () => {
             duration: 0.8,
             delay: 0.2
           }}>
-              
-
-              
-
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-hero-gradient bg-clip-text text-transparent">
+                Welcome to my portfolio website
+              </h1>
+              <p className="text-xs text-muted-foreground mb-8 opacity-70">
+                Focus on user experience and technical skills and creative mindset
+              </p>
               <motion.div initial={{
               opacity: 0,
               y: 30
