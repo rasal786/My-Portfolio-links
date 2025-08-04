@@ -52,7 +52,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.8 }}
-          className="absolute top-4 right-6 lg:top-8 lg:right-12 z-20"
+          className="absolute top-4 left-1/2 transform -translate-x-1/2 lg:top-8 z-20"
         >
           <p className="text-white text-lg lg:text-xl font-medium bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 shadow-lg">
             👋 Welcome to my portfolio website!
