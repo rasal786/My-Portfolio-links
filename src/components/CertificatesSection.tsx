@@ -5,7 +5,7 @@ import { ExternalLink, Award } from 'lucide-react';
 
 const certificates = [
   {
-    title: 'CS ION Career Edge - IT for Non-IT',
+    title: 'TCS ION Career Edge - IT for Non-IT',
     link: 'https://drive.google.com/file/d/1JXIIYM2cyhCvwCQ0ZqG550bjAJ0LdoR5/view',
   },
   {
