@@ -58,9 +58,7 @@ const HeroSection = () => {
         duration: 0.8,
         delay: 1.8
       }} className="fixed top-2 left-1/2 transform -translate-x-1/2 z-50">
-          <p className="text-white text-lg lg:text-xl font-medium bg-white/10 backdrop-blur-sm rounded-full border border-white/20 shadow-lg py-[89px] my-[89px] mx-0 px-0">
-            👋 Welcome to my portfolio website!
-          </p>
+          
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
