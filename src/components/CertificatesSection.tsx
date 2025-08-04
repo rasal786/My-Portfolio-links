@@ -57,9 +57,9 @@ const CertificatesSection = () => {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <Award className="h-8 w-8 text-primary" />
-            <h2 className="text-4xl font-bold bg-hero-gradient bg-clip-text text-transparent">
-              My Certificates
-            </h2>
+          <h2 className="text-4xl font-bold text-foreground">
+            My Certificates
+          </h2>
           </div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Professional certifications and achievements that showcase my commitment to continuous learning
