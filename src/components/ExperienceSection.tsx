@@ -278,7 +278,16 @@ const ExperienceSection = () => {
                 </div>
 
                 <Button 
-                  onClick={() => window.open('https://mohamed-emi-calculator.netlify.app', '_blank')}
+                  onClick={() => {
+                    console.log('EMI Calculator button clicked');
+                    try {
+                      window.open('https://mohamed-emi-calculator.netlify.app', '_blank', 'noopener,noreferrer');
+                    } catch (error) {
+                      console.error('Error opening URL:', error);
+                      // Fallback: direct navigation
+                      window.location.href = 'https://mohamed-emi-calculator.netlify.app';
+                    }
+                  }}
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
