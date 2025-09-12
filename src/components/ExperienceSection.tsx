@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Briefcase, Calendar, TrendingUp, Users, Lightbulb, Database, Code, Network } from 'lucide-react';
+import { Briefcase, Calendar, TrendingUp, Users, Lightbulb, Database, Code, Network, ExternalLink, Folder } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 const ExperienceSection = () => {
   const experiences = [{
     role: "Networking Specialist",
@@ -195,6 +196,118 @@ const ExperienceSection = () => {
                   <p className="text-muted-foreground">{achievement.description}</p>
                 </Card>
               </motion.div>)}
+          </div>
+        </motion.div>
+
+        {/* Personal Projects */}
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.8,
+        delay: 0.6
+      }} viewport={{
+        once: true
+      }} className="mt-20">
+          <h3 className="text-3xl font-bold text-center mb-12">Personal Projects</h3>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-center mb-12">
+            Hands-on learning projects that demonstrate my growing skills and passion for technology
+          </p>
+
+          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* EMI Calculator Project */}
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6
+          }} viewport={{
+            once: true
+          }} whileHover={{
+            scale: 1.02
+          }}>
+              <Card className="p-8 bg-card-gradient border-border backdrop-blur-sm hover:shadow-glow-primary transition-all duration-300 h-full">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-lg bg-primary/20">
+                    <Folder className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-2xl font-bold mb-2">EMI Calculator</h4>
+                    <Badge variant="secondary" className="text-green-400 border-green-400/30">
+                      Complete
+                    </Badge>
+                  </div>
+                </div>
+
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Built a responsive EMI calculator web application with modern design and user-friendly interface. Features dark mode support and real-time calculations.
+                </p>
+
+                <div className="mb-6">
+                  <h5 className="font-semibold mb-3">Key Features:</h5>
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    <div>
+                      <div className="text-blue-400 font-bold text-lg">Responsive</div>
+                      <div className="text-sm text-muted-foreground">Design</div>
+                    </div>
+                    <div>
+                      <div className="text-blue-400 font-bold text-lg">Dark Mode</div>
+                      <div className="text-sm text-muted-foreground">Support</div>
+                    </div>
+                    <div>
+                      <div className="text-blue-400 font-bold text-lg">Real-time</div>
+                      <div className="text-sm text-muted-foreground">Calculations</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h5 className="font-semibold mb-3">Tech Stack:</h5>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline" className="border-primary/30 text-primary">React</Badge>
+                    <Badge variant="outline" className="border-primary/30 text-primary">Tailwind CSS</Badge>
+                    <Badge variant="outline" className="border-primary/30 text-primary">TypeScript</Badge>
+                    <Badge variant="outline" className="border-primary/30 text-primary">Dark Mode</Badge>
+                  </div>
+                </div>
+
+                <Button 
+                  onClick={() => window.open('https://mohamed-emi-calculator.netlify.app', '_blank')}
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  View Details
+                </Button>
+              </Card>
+            </motion.div>
+
+            {/* Placeholder for future projects */}
+            <motion.div initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.2
+          }} viewport={{
+            once: true
+          }}>
+              <Card className="p-8 bg-card-gradient border-border backdrop-blur-sm border-dashed opacity-50 h-full flex items-center justify-center">
+                <div className="text-center">
+                  <Folder className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+                  <h4 className="text-xl font-semibold text-muted-foreground">More Projects Coming Soon</h4>
+                  <p className="text-muted-foreground mt-2">Exciting new projects in development</p>
+                </div>
+              </Card>
+            </motion.div>
           </div>
         </motion.div>
       </div>
