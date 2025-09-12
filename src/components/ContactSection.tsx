@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { Mail, Phone, MapPin, Github, Linkedin, Send, MessageCircle, Download } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Send, MessageCircle, Download, Circle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 const ContactSection = () => {
   const {
@@ -32,6 +32,12 @@ const ContactSection = () => {
     label: "Location",
     value: "Tamil Nadu, India",
     href: null
+  }, {
+    icon: Circle,
+    label: "Available for Work",
+    value: "Open to new opportunities and freelance projects",
+    href: null,
+    isAvailable: true
   }];
   const socialLinks = [{
     icon: Github,
@@ -192,7 +198,11 @@ const ContactSection = () => {
                 once: true
               }} className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/20">
-                      <info.icon className="w-6 h-6 text-primary" />
+                      {info.isAvailable ? (
+                        <Circle className="w-6 h-6 text-green-500 fill-green-500" />
+                      ) : (
+                        <info.icon className="w-6 h-6 text-primary" />
+                      )}
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">{info.label}</p>
