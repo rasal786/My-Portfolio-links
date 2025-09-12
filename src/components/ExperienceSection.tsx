@@ -200,7 +200,7 @@ const ExperienceSection = () => {
         </motion.div>
 
         {/* Personal Projects */}
-        <motion.div initial={{
+        <motion.div id="projects" initial={{
         opacity: 0,
         y: 30
       }} whileInView={{
