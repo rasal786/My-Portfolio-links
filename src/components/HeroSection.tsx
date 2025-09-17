@@ -80,7 +80,7 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Hero Content */}
-          <div className="order-1 lg:order-2 flex-1 text-center lg:text-left max-w-2xl">
+          <div className="order-1 lg:order-2 flex-1 text-center max-w-2xl mx-auto lg:mx-0">
             <motion.div initial={{
             opacity: 0,
             y: 50
@@ -91,10 +91,33 @@ const HeroSection = () => {
             duration: 0.8,
             delay: 0.2
           }}>
+              {/* Main Heading */}
+              <motion.h1 initial={{
+              opacity: 0,
+              y: 30
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.4
+            }} className="text-5xl lg:text-7xl font-bold mb-6 bg-hero-gradient bg-clip-text text-transparent">
+                I'm Mohamed Rasal
+              </motion.h1>
               
-              <p className="text-xs text-muted-foreground mb-8 opacity-70">
+              <motion.p initial={{
+              opacity: 0,
+              y: 20
+            }} animate={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.8,
+              delay: 0.6
+            }} className="text-lg text-muted-foreground mb-12 leading-relaxed">
                 Focus on user experience and technical skills and creative mindset
-              </p>
+              </motion.p>
+              
               <motion.div initial={{
               opacity: 0,
               y: 30
@@ -103,12 +126,12 @@ const HeroSection = () => {
               y: 0
             }} transition={{
               duration: 0.8,
-              delay: 0.9
-            }} className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button onClick={() => scrollToSection('projects')} className="bg-hero-gradient hover:opacity-90 text-white px-8 py-3 text-lg font-semibold transition-all duration-300 hover:shadow-glow-primary">
+              delay: 0.8
+            }} className="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-center">
+                <Button onClick={() => scrollToSection('projects')} className="bg-hero-gradient hover:opacity-90 text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:shadow-glow-primary hover:scale-105">
                   Explore My Work
                 </Button>
-                <Button variant="outline" onClick={() => scrollToSection('contact')} className="border-primary hover:bg-primary/10 px-8 py-3 text-lg font-semibold transition-all duration-300">
+                <Button variant="outline" onClick={() => scrollToSection('contact')} className="border-2 border-foreground/20 hover:border-primary hover:bg-primary/10 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105">
                   Get In Touch
                 </Button>
               </motion.div>
@@ -122,16 +145,16 @@ const HeroSection = () => {
               y: 0
             }} transition={{
               duration: 0.8,
-              delay: 1.1
-            }} className="flex justify-center lg:justify-start gap-6">
-                <a href="https://github.com/rasal786" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary">
-                  <Github className="w-6 h-6" />
+              delay: 1.0
+            }} className="flex justify-center gap-8">
+                <a href="https://github.com/rasal786" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-secondary/50 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary hover:scale-110 border border-foreground/10">
+                  <Github className="w-7 h-7" />
                 </a>
-                <a href="https://linkedin.com/in/mohamed-rasal" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary">
-                  <Linkedin className="w-6 h-6" />
+                <a href="https://linkedin.com/in/mohamed-rasal" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-secondary/50 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary hover:scale-110 border border-foreground/10">
+                  <Linkedin className="w-7 h-7" />
                 </a>
-                <a href="mailto:rasaljafreennj@gmail.com" className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary">
-                  <Mail className="w-6 h-6" />
+                <a href="mailto:rasaljafreennj@gmail.com" className="p-4 rounded-full bg-secondary/50 hover:bg-primary/20 transition-all duration-300 hover:shadow-glow-primary hover:scale-110 border border-foreground/10">
+                  <Mail className="w-7 h-7" />
                 </a>
               </motion.div>
             </motion.div>
