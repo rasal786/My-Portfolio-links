@@ -159,7 +159,7 @@ const HeroSection = () => {
           duration: 2,
           repeat: Infinity
         }} className="flex flex-col items-center gap-2 cursor-pointer" onClick={() => scrollToSection('about')}>
-            <span className="text-sm text-muted-foreground">Scroll to explore</span>
+            
             <ArrowDown className="w-5 h-5 text-primary" />
           </motion.div>
         </motion.div>
