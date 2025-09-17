@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import AnimatedTitle from './AnimatedTitle';
 const profileImage = '/lovable-uploads/225ed0e3-f2d6-42a8-85d6-a01180afec78.png';
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -92,8 +93,14 @@ const HeroSection = () => {
             delay: 0.2
           }}>
               {/* Main Heading */}
+              <h1 className="text-5xl lg:text-7xl font-bold mb-4 bg-hero-gradient bg-clip-text text-transparent">
+                Mohamed Rasal
+              </h1>
               
-              
+              {/* Animated Professional Title */}
+              <div className="h-16 mb-6">
+                <AnimatedTitle titles={['Data Analysis', 'Networking']} />
+              </div>
               <motion.p initial={{
               opacity: 0,
               y: 20
