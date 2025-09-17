@@ -99,18 +99,7 @@ const HeroSection = () => {
               <div className="h-16 mb-6">
                 <AnimatedTitle titles={['Data Analysis', 'Networking']} />
               </div>
-              <motion.p initial={{
-              opacity: 0,
-              y: 20
-            }} animate={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              duration: 0.8,
-              delay: 0.6
-            }} className="text-lg text-muted-foreground mb-12 leading-relaxed">
-                Focus on user experience and technical skills and creative mindset
-              </motion.p>
+              
               
               <motion.div initial={{
               opacity: 0,
